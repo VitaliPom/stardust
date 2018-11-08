@@ -29,7 +29,7 @@
 		    position: absolute;
 		    width: 24px;
 		    height: 24px;
-		    background: #ccc;
+		    background-color: #ccc;
 		    border-radius:50%;
 		}
     </style>
@@ -64,6 +64,7 @@
 	function throwObj(){
 		counter++;
 		if(counter > 657){
+			$("#position4").css("background-color", "transparent");
 			return;
 		}
 		directionArray_index_++;
@@ -74,8 +75,10 @@
 
 		var elem_J = $( "#position4" ).clone();
 		
-		elem_J.attr("id","position4_");
-		
+		elem_J.attr("id","position4_"+counter);
+		var colors_arr = ["#f1983a", "#ed7558", "#ea547a", "#a064a8", "#5b6db5", "#2595ad", "#18b199", "#6ebb82"];
+		var color_arr_index = parseInt(Math.random()*colors_arr.length);
+		elem_J.css("background-color", colors_arr[color_arr_index]);
 		$( "#targetElement" ).prepend(elem_J);
 		var elem = elem_J[0]; 
 		var max_pos = 150+Math.random()*72
