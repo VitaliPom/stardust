@@ -13,6 +13,7 @@
 	
 	<style type="text/css">
 		body{
+			overflow: hidden;
 			background-color: #0f0f20;
 			/*cursor: none;*/
 		    /* Full height */
@@ -52,17 +53,23 @@
 	  });
 	});
 
-	var directionArray_ = [11,10, 1, 0];
+	var directionArray = [1111,1110, 111, 110, 11,10, 1, 0];
 	var directionArray_index_ = 0;
+
+	var counter = 1;
 
     setInterval(throwObj, 30);
 	
+
 	function throwObj(){
+		counter++;
+		if(counter > 657){
+			return;
+		}
 		directionArray_index_++;
-		if(directionArray_index_ >= 4){
+		if(directionArray_index_ >= 8){
 			directionArray_index_ = 0;
 		}
-		var directionArray = [11,10, 1, 0];
 		var directionArray_index = directionArray_index_;
 
 		var elem_J = $( "#position4" ).clone();
@@ -75,7 +82,7 @@
 	    var pos = 0;
 
 	    function frame() {
-	    	if (pos == 100) {
+	    	if (pos == 600) {
 	      		clearInterval(id);
 	    	} else {
 	      		pos++; 
@@ -96,6 +103,22 @@
 	      			var posLeft = parseInt(elem.style.left) - 1;
 	      		}
 
+	      		if(directionArray[directionArray_index] == 1111){
+	      			var posTop = parseInt(elem.style.top);
+	      			var posLeft = parseInt(elem.style.left) + 1;
+	      		}
+	      		if(directionArray[directionArray_index] == 1110){
+	      			var posTop = parseInt(elem.style.top);
+	      			var posLeft = parseInt(elem.style.left) - 1;
+	      		}
+	      		if(directionArray[directionArray_index] == 111){
+	      			var posTop = parseInt(elem.style.top) - 1;
+	      			var posLeft = parseInt(elem.style.left);
+	      		}
+	      		if(directionArray[directionArray_index] == 110){
+	      			var posTop = parseInt(elem.style.top) + 1;
+	      			var posLeft = parseInt(elem.style.left) ;
+	      		}
 	      		elem.style.top =  posTop + 'px'; 
 	      		elem.style.left = posLeft + 'px'; 
 	    	}
