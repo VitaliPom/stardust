@@ -82,8 +82,21 @@
 	    var pos = 0;
 
 	    function frame() {
-	    	if (pos == 600) {
-	      		clearInterval(id);
+	    	if (pos == 655) {
+	      		$(elem).animate({
+				   	 width: 2,
+				   	 height:2,
+				   	 'margin-left':'-50px',
+				 	 'margin-top':'-50px',
+				 	 'margin-bottom':'-50px',
+				 	 'margin-right':'-50px'
+			    }, 2450, function(){
+			    	$(elem).animate({
+					   		 width: 8,
+				   			 height: 8,
+				   	}, 120, function(){});
+			    });
+				clearInterval(id);	
 	    	} else {
 	      		pos++; 
 	      		if(directionArray[directionArray_index] == 11){
