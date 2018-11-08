@@ -58,7 +58,7 @@
 
 	var counter = 1;
 
-    setInterval(throwObj, 30);
+    setInterval(throwObj, 90);
 	
 
 	function throwObj(){
@@ -82,7 +82,7 @@
 	    var pos = 0;
 
 	    function frame() {
-	    	if (pos == 655) {
+	    	if (pos == 222) {
 	      		$(elem).animate({
 				   	 width: 2,
 				   	 height:2,
@@ -90,11 +90,11 @@
 				 	 'margin-top':'-50px',
 				 	 'margin-bottom':'-50px',
 				 	 'margin-right':'-50px'
-			    }, 2450, function(){
+			    }, 400, function(){
 			    	$(elem).animate({
 					   		 width: 8,
 				   			 height: 8,
-				   	}, 120, function(){});
+				   	}, 420, function(){});
 			    });
 				clearInterval(id);	
 	    	} else {
