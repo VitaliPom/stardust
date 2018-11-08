@@ -24,13 +24,13 @@
 		}
 
 		  
-		  .positionDiv {
+		.positionDiv {
 		    position: absolute;
 		    width: 28px;
 		    height: 28px;
-		    background: #080;
+		    background: #ccc;
 		    border-radius:50%;
-		  }
+		}
     </style>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -44,7 +44,13 @@
 </div>
  
 <script type="text/javascript">
-	
+	$( document ).mousemove(function( event ) {
+	  $( "#position4" ).position({
+	    my: "left+7",
+	    of: event,
+	    collision: "fit"
+	  });
+	});
 
 </script>
 
