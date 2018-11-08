@@ -27,8 +27,8 @@
 		  
 		.positionDiv {
 		    position: absolute;
-		    width: 28px;
-		    height: 28px;
+		    width: 24px;
+		    height: 24px;
 		    background: #ccc;
 		    border-radius:50%;
 		}
@@ -78,11 +78,12 @@
 		
 		$( "#targetElement" ).prepend(elem_J);
 		var elem = elem_J[0]; 
+		var max_pos = 150+Math.random()*72
+		var pos = 0;
 		var id = setInterval(frame, 5);    
-	    var pos = 0;
-
 	    function frame() {
-	    	if (pos == 222) {
+	    	if (pos >= max_pos) {
+	      		
 	      		$(elem).animate({
 				   	 width: 2,
 				   	 height:2,
@@ -90,7 +91,7 @@
 				 	 'margin-top':'-50px',
 				 	 'margin-bottom':'-50px',
 				 	 'margin-right':'-50px'
-			    }, 400, function(){
+			    },400 , function(){
 			    	$(elem).animate({
 					   		 width: 8,
 				   			 height: 8,
