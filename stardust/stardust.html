@@ -102,38 +102,38 @@
 			    });
 				clearInterval(id);	
 	    	} else {
-	      		pos+=8; 
+	      		pos+=4; 
 	      		if(directionArray[directionArray_index] == 11){
-	      			var posTop = parseInt(elem.style.top) + 8;
-	      			var posLeft = parseInt(elem.style.left) + 8;
+	      			var posTop = parseInt(elem.style.top) + 4;
+	      			var posLeft = parseInt(elem.style.left) + 4;
 	      		}
 	      		if(directionArray[directionArray_index] == 10){
-	      			var posTop = parseInt(elem.style.top) + 8;
-	      			var posLeft = parseInt(elem.style.left) - 8;
+	      			var posTop = parseInt(elem.style.top) + 4;
+	      			var posLeft = parseInt(elem.style.left) - 4;
 	      		}
 	      		if(directionArray[directionArray_index] == 1){
-	      			var posTop = parseInt(elem.style.top) - 8;
-	      			var posLeft = parseInt(elem.style.left) + 8;
+	      			var posTop = parseInt(elem.style.top) - 4;
+	      			var posLeft = parseInt(elem.style.left) + 4;
 	      		}
 	      		if(directionArray[directionArray_index] == 0){
-	      			var posTop = parseInt(elem.style.top) - 8;
-	      			var posLeft = parseInt(elem.style.left) - 8;
+	      			var posTop = parseInt(elem.style.top) - 4;
+	      			var posLeft = parseInt(elem.style.left) - 4;
 	      		}
 
 	      		if(directionArray[directionArray_index] == 1111){
 	      			var posTop = parseInt(elem.style.top);
-	      			var posLeft = parseInt(elem.style.left) + 8;
+	      			var posLeft = parseInt(elem.style.left) + 4;
 	      		}
 	      		if(directionArray[directionArray_index] == 1110){
 	      			var posTop = parseInt(elem.style.top);
-	      			var posLeft = parseInt(elem.style.left) - 8;
+	      			var posLeft = parseInt(elem.style.left) - 4;
 	      		}
 	      		if(directionArray[directionArray_index] == 111){
-	      			var posTop = parseInt(elem.style.top) - 8;
+	      			var posTop = parseInt(elem.style.top) - 4;
 	      			var posLeft = parseInt(elem.style.left);
 	      		}
 	      		if(directionArray[directionArray_index] == 110){
-	      			var posTop = parseInt(elem.style.top) + 8;
+	      			var posTop = parseInt(elem.style.top) + 4;
 	      			var posLeft = parseInt(elem.style.left) ;
 	      		}
 	      		elem.style.top =  posTop + 'px'; 
